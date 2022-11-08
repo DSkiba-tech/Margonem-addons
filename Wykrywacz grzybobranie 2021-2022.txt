@@ -1,0 +1,16 @@
+g.loadQueue.push({fun:function() {
+  function checkShroom()
+  {
+    for(let i in g.npc) {
+      if(["Ogromny mroźlarz","Ogromny bulwiak pospolity","Ogromny szpicak ponury",
+     "Ogromna dzwonkówka tarczowata","Ogromna płomiennica tląca"].includes(g.npc[i].nick)) {
+        clearInterval(int1);
+        mAlert("<center>Znalazłem grzyba! "+g.npc[i].nick+"<br><img src='"+g.npc[i].icon+"'><br>"+map.name+"("+g.npc[i].x+","+g.npc[i].y+")<br> Grzybowykrywacz Lejta</center>");
+
+      }
+	}
+  }
+ 	let int1;
+    int1 = setInterval(checkShroom,500);
+
+}});

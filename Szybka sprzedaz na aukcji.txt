@@ -1,0 +1,5 @@
+$(document).keydown(function(e) {
+  if(e.keyCode == 78) {
+    document.getElementsByClassName("SI-button small,green")[0].click();
+  }
+});
